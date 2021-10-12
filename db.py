@@ -3,7 +3,7 @@ from pymongo import MongoClient
 """
 WILL LIKELY NEED TO CHANGE CLIENT FOR HEROKU USE
 """
-client = MongoClient("mongodb+srv://laptop:laptop-pass@footballpicker-cluster.yqjdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://heroku:herokupass@footballpicker-cluster.yqjdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 col = client.football_picks
 db = col.data
 

@@ -1,1 +1,1 @@
-web:python3 footballServer.py
+worker python3 footballServer.py

@@ -1,1 +1,1 @@
-worker python footballServer.py
+web: gunicorn footballServer:app

@@ -62,7 +62,7 @@ def addDict(team, dict):
     elif team == "TEN":
         dict["Tennessee Titans"][0] += 1
     elif team == "WAS":
-        dict["Washington Football Team"][0] += 1
+        dict["Washington Commanders"][0] += 1
 
 def getOdds(teams):
     for i, t in enumerate(teams):
@@ -144,7 +144,7 @@ def lengthenName(team):
     elif team == "TEN":
         name = "Tennessee Titans"
     elif team == "WAS":
-        name = "Washington Football Team"
+        name = "Washington Commanders"
     else:
         print("ERROR", team)
     return name

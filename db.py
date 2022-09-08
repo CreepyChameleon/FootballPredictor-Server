@@ -3,9 +3,9 @@ from pymongo import MongoClient
 """
 WILL LIKELY NEED TO CHANGE CLIENT FOR HEROKU USE
 """
-client = MongoClient("mongodb+srv://heroku:herokupass@footballpicker-cluster.yqjdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://laptop:laptop-pass@footballpicker-cluster.yqjdz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 col = client.football_picks
-db = col.data
+db = col.data2022
 
 # insert object into database
 def ins(dict0):
@@ -24,11 +24,11 @@ def ins(dict0):
     # if it does exist replace data with updated data
     else:
         try:
-            dataId = db.find_one(dict0)['_id']
+            dataId = db.find_one(dict1)['_id']
             db.replace_one({'_id': dataId}, dict0)
             print(f"Replaced duplicate at id {dataId}")
-        except:
-            print("No duplicates present")
+        except Exception as e:
+            print("No duplicates present", e)
 
 def find(week, name):
     dict0 = {
